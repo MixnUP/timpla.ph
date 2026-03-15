@@ -1,73 +1,56 @@
 # Timpla Landing Page Architecture & Layout Plan
 
-This document outlines the section-by-section layout for the Timpla landing page, applying the established design system (high-contrast Cream and Red, soft shapes, and comforting typography).
+This document outlines the section-by-section layout for the Timpla app acquisition landing page. It blends organic, comforting food imagery with modern, tech-forward grid structures.
+
+## Global Design Tokens
+* **Colors:** Deep Red (`#B50418`), Primary Red (`#D52A28`), Cream (`#FFFBEB`), Dark Neutral (`#343132`), White (`#FFFFFF`).
+* **Radii:** `rounded-full` (9999px) for buttons. `rounded-2xl` (16px) for UI cards.
+* **Borders (Tech Accent):** Thin, 1px solid borders using an opacity-reduced White or Red to create structured, app-like grids.
 
 ---
 
 ## 1. Global Navigation (The Header)
-* **Background:** Cream (`#FFFBEB`) for maximum readability.
-* **Brand Asset:** Secondary Logo (Pot icon + "TIMPLA" wordmark) to keep the layout clean and minimal.
-* **UI Elements:**
-  * **Links:** Menu Preview, How It Works, Our Story (Font: Rounded Mplus 1c, Dark Neutral text).
-  * **CTA:** A Primary Red (`#D52A28`) "Download the App" button with full rounding.
-
-## 2. The Hero Section (The Hook)
-* **Background:** Primary Red (`#D52A28`) to make an immediate, bold visual impact.
-* **Typography:** * **Headline:** "The Authentic Filipino Meal Kit." (Massive, comforting Nunito, White text).
-  * **Subheadline:** "Pre-portioned ingredients and easy chef-crafted recipes. Download the Timpla app to cook your favorite 'Pinas classics in under 30 minutes." (Rounded Mplus 1c, White text).
-* **Visual / Photography:** * A large, floating, soft-masked illustration showing a cooked dish (e.g., Nilagang Baka ala Bulalo or Beef Mechado) positioned next to its unboxed ingredients and a sleek mobile phone mockup displaying the Timpla app interface.
-  * **Strict Image Rules:** * Do not include the word "Mealkit" anywhere on the image itself.
-    * Ensure any sauces depicted are strictly part of the main dish being featured.
-    * Do not include eggs in the visual unless they are an explicit, core ingredient of that specific recipe.
-* **CTA:** Side-by-side "Download on the App Store" and "Get it on Google Play" badge buttons.
-
-## 3. The Trust Bar (Focusing on the Prep)
+* **Structure:** A sticky `flex` container (row), `justify-between`, `items-center`, `border-b border-gray-200`.
 * **Background:** Cream (`#FFFBEB`).
-* **Layout:** A simple, 4-column grid layout spanning the width of the container.
-* **Typography:** Bold Red (`#D52A28`) text in Nunito, paired with Dark Neutral subtext in Rounded Mplus 1c.
-* **Content:** Focus on the mechanical truths of the meal kit experience:
-  * "Pre-Measured Ingredients"
-  * "Zero Grocery Shopping"
-  * "Chef-Crafted Recipes"
-  * "Cook in 30 Mins or Less"
+* **Elements:**
+  * **Left:** Secondary Logo (Pot icon + "TIMPLA" wordmark).
+  * **Right:** A `rounded-full` Primary Red (`#D52A28`) button: "Download the App".
 
-## 4. The Value Proposition Grid
-* **Background:** Cream (`#FFFBEB`).
-* **Section Title:** "Mura, Madali, Masarap" (Centered, Nunito, Dark Neutral text).
-* **Layout:** A balanced 3-column card grid.
-* **Card UI:** White background cards with soft drop shadows and large 24px rounded corners.
-* **Visuals & Copy:** Warm, high-quality photos highlighting:
-  1. **Mura (Affordability):** Great portion sizes for the price compared to takeout.
-  2. **Madali (Convenience):** Skip the palengke. Order on the app, and we deliver exact portions so you can go straight to cooking.
-  3. **Masarap (Taste):** A mouth-watering close-up of the authentic, finished dish.
+## 2. The Hero Section (The Overlapping Card - *Ref: Verona*)
+* **Structure:** `relative`, `min-h-[80vh]`. A large, edge-to-edge background photograph of a finished dish and raw ingredients, heavily darkened or blurred.
+* **The "Readability Box":** Positioned `absolute` (bottom-left or center). A solid Cream (`#FFFBEB`) or frosted-glass card (`backdrop-blur-md`), `rounded-3xl`, with generous padding.
+  * **H1:** "The Authentic Filipino Meal Kit." (Dark Neutral, Nunito).
+  * **Subtitle:** "Pre-portioned ingredients. Chef-crafted recipes. Delivered via the Timpla app."
+  * **CTA:** App Store / Google Play badges.
+* **Strict Image Rules:** No "Mealkit" text on images. Sauces must be dish-specific. No eggs unless explicit to the recipe.
 
-## 5. Timpla Signatures (The Menu Preview)
-* **Background:** Primary Red (`#D52A28`) to break up the page pacing and draw attention to the food.
-* **Section Title:** White text, Nunito font (e.g., "Preview Our Signatures").
-* **Layout:** A horizontal, swipeable row of product cards.
-* **Card UI:** Cream (`#FFFBEB`) background to ensure high contrast against the red section. 24px corner radius.
-* **Content:** * Clean, rounded images of finished dishes (e.g., Bicol Express, Chicken Sotanghon Guisado, Lauyang Baboy).
-  * Dish Name (Nunito, Dark Neutral).
-  * Brief description.
-  * Primary Red "View in App" button.
+## 3. The App-First Trust Grid (The Tech Edge - *Ref: Cultural Connectors*)
+* **Structure:** A dark-mode CSS Grid (`grid-cols-2 md:grid-cols-4`).
+* **Background:** Deep Red (`#B50418`).
+* **Styling:** Use thin 1px white borders (`border-r`, `border-b` with low opacity) to separate the columns, giving it an editorial, app-interface feel. Include small crosshair (`+`) accents in the grid intersections.
+* **Content Nodes (White Text):**
+  * "Pre-Measured" | "Zero Grocery Shopping" | "Chef-Crafted" | "Cook in 30 Mins"
+  * Top element is a large, sharp number or icon; bottom is the label.
+
+## 4. The Value Proposition Bento ("Mura, Madali, Masarap" - *Ref: Pretzels*)
+* **Structure:** Cream (`#FFFBEB`) background. 
+* **Layout:** An asymmetrical "Bento Box" CSS Grid.
+  * **Left Area (Span 2 cols):** A large, vertical card for "Masarap" (Taste) featuring a massive, mouth-watering close-up.
+  * **Right Area (Stacked):** Two smaller, horizontal cards for "Mura" (Affordability) and "Madali" (Convenience).
+* **Accents:** Apply absolute-positioned, floating PNG cut-outs of ingredients (garlic, chili) overlapping the edges of these cards to break the rigid grid.
+
+## 5. Timpla Signatures (The Dense Menu - *Ref: Verona*)
+* **Structure:** Deep Red (`#B50418`) background to make the food photography pop.
+* **Layout:** A structured, dense 2x2 or 3x2 CSS Grid (No carousel).
+* **Card UI:** Cream (`#FFFBEB`) background, `rounded-2xl`, subtle drop shadow. 
+  * Layout is horizontal (`flex-row`). A square, fully rounded thumbnail of the dish on the left; Title, brief description, and a small "View in App" text link on the right. 
 
 ## 6. The Timpla Story (About Us)
-* **Background:** Cream (`#FFFBEB`).
-* **Layout:** A split 50/50 container (Text on left, Image on right on desktop; stacked on mobile).
-* **Content:** * **Visual:** A soft-masked photo of the kitchen or founders.
-  * **Copy:** A heartfelt message about the mission to bring "Pinas sa bawat kagat" to busy families and overseas Filipinos missing the taste of home.
+* **Structure:** Cream (`#FFFBEB`) background. `grid-cols-1 md:grid-cols-2`.
+* **Left:** Editorial typography (large Nunito H2, clean paragraphs) detailing the mission to bring "Pinas sa bawat kagat" to overseas Filipinos.
+* **Right:** Soft-masked photo of the kitchen/founders.
 
-## 7. How It Works (The Process)
-* **Background:** Cream (`#FFFBEB`).
-* **Layout:** 3 simple, evenly spaced columns using custom iconography or small, rounded illustrations.
-* **Steps:**
-  1. **Tap & Choose:** Download the app and select from our weekly menu.
-  2. **We Prep, You Cook:** Receive perfectly portioned ingredients and a simple recipe card. No waste, no stress.
-  3. **Kain Tayo!:** Enjoy a wholesome meal with minimal effort.
-
-## 8. Footer (The Close)
-* **Background:** Primary Red (`#D52A28`).
-* **Typography:** White text for all links and descriptions.
-* **Visual:** A massive, oversized "TIMPLA" wordmark anchored at the very bottom of the page.
-* **Elements:** * App Store and Google Play download badges.
-  * Navigation links, FAQs, and social media icons.
+## 7. Footer (The Close)
+* **Structure:** Deep Red (`#B50418`) background.
+* **Visual:** A massive, full-width, edge-to-edge "TIMPLA" wordmark in White at the absolute bottom.
+* **Content:** App download badges centered above the wordmark, flanked by clean, minimal navigational links.

@@ -1,26 +1,104 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Design Tokens from DESIGN_SYSTEM.md */
+  --color-primary: #D52A28;
+  --color-primary-dark: #B50418;
+  --color-text-dark: #343132;
+  --color-bg-light: #FFFBEB;
+  --color-accent-1: #FFD967;
+  --color-accent-2: #F68846;
+  --color-accent-3: #F3BB24;
+
+  /* Shape & Radii */
+  --radius-full: 9999px;
+  --radius-lg: 24px;
+  --radius-md: 16px;
+
+  /* System Mappings */
+  --background: var(--color-bg-light);
+  --foreground: var(--color-text-dark);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Color Tokens */
+  --color-primary: var(--color-primary);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-text-dark: var(--color-text-dark);
+  --color-bg-light: var(--color-bg-light);
+  --color-accent-1: var(--color-accent-1);
+  --color-accent-2: var(--color-accent-2);
+  --color-accent-3: var(--color-accent-3);
+
+  /* Radius Tokens */
+  --radius-full: var(--radius-full);
+  --radius-lg: var(--radius-lg);
+  --radius-md: var(--radius-md);
+
+  /* Font Family Tokens */
+  --font-nunito: var(--font-nunito);
+  --font-m-plus-rounded: var(--font-m-plus-rounded);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-m-plus-rounded), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-nunito), sans-serif;
+    font-weight: 800;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .btn-primary {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    transition: background-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-primary-dark);
+  }
+
+  .btn-ghost-dark {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    transition: opacity 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-ghost-dark:hover {
+    opacity: 0.8;
+  }
+
+  .card-light {
+    background-color: white;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+  }
+
+  .card-dark {
+    background-color: var(--color-bg-light);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+  }
 }

@@ -26,6 +26,7 @@ The Timpla color palette reflects a bold, approachable, and authentic character.
 | Role | HEX Code | CSS Variable | Usage |
 | :--- | :--- | :--- | :--- |
 | **Primary Red** | `#D52A28` | `--color-primary` | Main CTA buttons, hero backgrounds, primary emphasis. |
+| **Deep Red** | `#B50418` | `--color-primary-dark` | Hover states, rich hero backgrounds, footer backgrounds. |
 | **Dark Neutral** | `#343132` | `--color-text-dark` | Body copy, headings on light backgrounds, high-contrast UI elements. |
 | **Cream (Bg)** | `#FFFBEB` | `--color-bg-light` | Primary page backgrounds, card backgrounds on dark sections. |
 | **Accent 1** | `#FFD967` | `--color-accent-1` | Highlights and small visual accents only (never body text). |
