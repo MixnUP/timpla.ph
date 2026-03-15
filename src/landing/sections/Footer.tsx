@@ -5,7 +5,7 @@ export const Footer: React.FC = () => {
   return (
     <footer className="w-full bg-[#B50418] pt-24 pb-12 px-6 flex flex-col items-center text-center overflow-hidden">
       {/* CTA Block */}
-      <div className="max-w-3xl flex flex-col gap-8 mb-24 z-10">
+      <div className="max-w-3xl flex flex-col gap-8 mb-16 z-10">
         <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight font-display tracking-tight">
           Get Fresh Ingredients & Perfect Recipes Delivered Today!
         </h2>
@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
 
       {/* Brand Graphic */}
       <div className="w-full select-none pointer-events-none">
-        <h2 className="text-[15vw] font-black text-white/10 leading-none text-center tracking-tighter">
+        <h2 className="text-[15vw] font-black text-white/10 leading-none text-center font-nunito">
           TIMPLA
         </h2>
       </div>

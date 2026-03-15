@@ -23,21 +23,14 @@ export const Hero: React.FC = () => {
 
         {/* Right Column (Visual Focus) */}
         <div className="relative h-full w-full flex justify-center lg:justify-end items-center py-12">
-          {/* Mockup + Floating Dish Composite */}
+          {/* Mockup Composite */}
           <div className="relative w-full max-w-lg aspect-square flex items-center justify-center">
-             {/* Phone Mockup Placeholder */}
-             <div className="absolute z-0 w-1/2 aspect-[9/19.5] bg-neutral-800 rounded-[3rem] border-8 border-neutral-900 shadow-2xl overflow-hidden">
-                <div className="w-full h-full bg-[#D52A28]/10 animate-pulse flex items-center justify-center">
-                   <span className="text-neutral-500 font-bold text-xs rotate-[-90deg]">App Layout</span>
-                </div>
-             </div>
-             
-             {/* Floating Dish Cut-out Placeholder */}
-             <div className="relative z-10 w-4/5 aspect-square drop-shadow-[0_35px_35px_rgba(0,0,0,0.25)]">
-                <ImagePlaceholder 
-                  text="Beef Mechado: High-res Cut-out (No background)" 
-                  className="w-full h-full rounded-full" 
-                  aspectRatio="aspect-square"
+             {/* Phone Mockup */}
+             <div className="relative z-0 w-3/4 aspect-[9/19.5]">
+                <img 
+                  src="/images/app-mockup-2.png" 
+                  alt="Timpla App Interface" 
+                  className="w-full h-full object-contain" 
                 />
              </div>
           </div>

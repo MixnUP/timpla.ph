@@ -13,22 +13,26 @@ const meals = [
 
 export const Signatures: React.FC = () => {
   return (
-    <section id="signatures" className="w-full bg-[#B50418] py-24 lg:py-32 rounded-t-[3rem]">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white font-display">
+    <section id="signatures" className="w-full bg-[#B50418] py-24 lg:py-32 rounded-t-[3rem] overflow-hidden">
+      {/* Centered Header Content */}
+      <div className="max-w-7xl mx-auto px-6 mb-16">
+        <div className="text-center md:text-left">
+            <h2 className="text-3xl lg:text-5xl font-bold text-white font-display leading-[1.1]">
               Explore Meal Kits in the Timpla App.
             </h2>
-            <p className="text-white/80 mt-4">
+            <p className="text-white/80 mt-4 text-lg">
               Discover and order your favorite dishes with ease, right from your phone.
             </p>
         </div>
-        
-        <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 px-6 hide-scrollbar">
+      </div>
+      
+      {/* Full-Width Carousel Container */}
+      <div className="w-full relative">
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-12 px-6 md:px-[calc((100vw-min(80rem,100vw-3rem))/2)] hide-scrollbar">
           {meals.map((meal, index) => (
             <div 
               key={index} 
-              className="min-w-[300px] md:min-w-[400px] bg-white rounded-3xl p-6 flex flex-col gap-4 snap-center shrink-0 shadow-2xl"
+              className="min-w-[280px] md:min-w-[380px] bg-white rounded-3xl p-6 flex flex-col gap-4 snap-center shrink-0 shadow-2xl transition-transform hover:scale-[1.02] duration-300"
             >
               <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-sm">
                 <ImagePlaceholder 
@@ -50,6 +54,8 @@ export const Signatures: React.FC = () => {
               </button>
             </div>
           ))}
+          {/* Spacer for the last card to allow snapping to center/end properly */}
+          <div className="min-w-[6rem] shrink-0" />
         </div>
       </div>
       
