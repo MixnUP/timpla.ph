@@ -1,22 +1,20 @@
-import Navbar from "@/src/landing/components/Navbar";
-import Hero from "@/src/landing/sections/Hero";
-import TrustBar from "@/src/landing/sections/TrustBar";
-import ValueProp from "@/src/landing/sections/ValueProp";
-import MenuCarousel from "@/src/landing/sections/MenuCarousel";
-import Story from "@/src/landing/sections/Story";
-import HowItWorks from "@/src/landing/sections/HowItWorks";
-import Footer from "@/src/landing/sections/Footer";
+import { Navbar } from "@/src/landing/sections/Navbar";
+import { Hero } from "@/src/landing/sections/Hero";
+import { ValueGrid } from "@/src/landing/sections/ValueGrid";
+import { Signatures } from "@/src/landing/sections/Signatures";
+import { ProcessTrust } from "@/src/landing/sections/ProcessTrust";
+import { Story } from "@/src/landing/sections/Story";
+import { Footer } from "@/src/landing/sections/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#FFFBEB] selection:bg-[#D52A28] selection:text-white">
+    <main className="min-h-screen bg-[#FFFBEB]">
       <Navbar />
       <Hero />
-      <TrustBar />
-      <ValueProp />
-      <MenuCarousel />
+      <ValueGrid />
+      <Signatures />
+      <ProcessTrust />
       <Story />
-      <HowItWorks />
       <Footer />
     </main>
   );
