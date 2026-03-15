@@ -3,29 +3,32 @@ import { ImagePlaceholder } from '../components/ImagePlaceholder';
 
 const items = [
   {
-    title: "Masarap (Taste)",
-    desc: "Every dish is chef-crafted to deliver a restaurant-quality experience in your own kitchen.",
-    imageText: "Authentic cooked dish tight shot"
+    title: "Farm-Fresh Guarantee",
+    desc: "Premium ingredients sourced directly from trusted farms, delivered fresh to maintain the highest quality.",
+    imageText: "Farm-fresh ingredients"
   },
   {
-    title: "Mura (Affordability)",
-    desc: "Pre-portioned ingredients reduce waste and save you money compared to grocery shopping.",
-    imageText: "Fresh ingredients composition"
+    title: "Time-Saving Convenience",
+    desc: "Skip the meal planning and grocery shopping. We handle everything so you can enjoy cooking without the stress.",
+    imageText: "Convenient meal prep"
   },
   {
-    title: "Madali (Convenience)",
-    desc: "Follow simple, app-guided steps to prep and cook a full Filipino feast in under 30 minutes.",
-    imageText: "Easy prep / app cooking interface shot"
+    title: "Tested & Perfected",
+    desc: "Every recipe is carefully tested and perfected to guarantee delicious results every time you cook.",
+    imageText: "Perfected recipe dish"
   }
 ];
 
 export const ValueGrid: React.FC = () => {
   return (
-    <section className="w-full bg-[#FFFBEB] py-24 lg:py-32">
+    <section id="why-timpla" className="w-full bg-white py-24 lg:py-32">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-5xl font-bold text-[#343132] font-display">
-            The Timpla Promise
+          <span className="text-[#D52A28] font-bold tracking-widest uppercase text-sm mb-4 block">
+            MURA, MADALI, MASARAP
+          </span>
+          <h2 className="text-3xl lg:text-5xl font-bold text-[#343132] font-display max-w-2xl mx-auto">
+            Restaurant-quality meals to your kitchen with zero stress.
           </h2>
         </div>
         

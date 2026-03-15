@@ -17,15 +17,18 @@ export const Signatures: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-5xl font-bold text-white font-display">
-              Our Signatures
+              Explore Meal Kits in the Timpla App.
             </h2>
+            <p className="text-white/80 mt-4">
+              Discover and order your favorite dishes with ease, right from your phone.
+            </p>
         </div>
         
         <div className="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 px-6 hide-scrollbar">
           {meals.map((meal, index) => (
             <div 
               key={index} 
-              className="min-w-[300px] md:min-w-[400px] bg-[#FFFBEB] rounded-3xl p-6 flex flex-col gap-4 snap-center shrink-0 shadow-2xl"
+              className="min-w-[300px] md:min-w-[400px] bg-white rounded-3xl p-6 flex flex-col gap-4 snap-center shrink-0 shadow-2xl"
             >
               <div className="w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-sm">
                 <ImagePlaceholder 

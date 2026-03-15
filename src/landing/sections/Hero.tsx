@@ -4,15 +4,15 @@ import { ImagePlaceholder } from '../components/ImagePlaceholder';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative w-full min-h-[90vh] bg-[#FFFBEB] flex items-center pt-20 overflow-hidden">
+    <section className="relative w-full min-h-[90vh] bg-white flex items-center pt-20 overflow-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto px-6 items-center">
         {/* Left Column (Typography Focus) */}
         <div className="flex flex-col gap-6 max-w-xl z-10">
           <h1 className="text-5xl lg:text-7xl font-extrabold text-[#343132] font-display leading-[1.1] tracking-tighter">
-            The Authentic Filipino <span className="text-primary italic">Meal Kit.</span>
+            The Authentic Filipino <span className="text-primary">Meal Kit.</span>
           </h1>
           <p className="text-lg text-[#343132]/80 font-sans leading-relaxed">
-            Pre-portioned ingredients. Chef-crafted recipes. Download the Timpla app to cook your favorite &apos;Pinas classics in under 30 minutes.
+            Discover your next favorite meal with Timpla — personalized kits and effortless deliveries in one app.
           </p>
           
           <div className="flex flex-row gap-4 mt-4">
